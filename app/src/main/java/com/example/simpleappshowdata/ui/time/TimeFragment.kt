@@ -21,7 +21,7 @@ class TimeFragment : BaseFragment(), TimeView {
     }
 
     override fun getMinskTime(time: String) {
-        time_text.text = "Time in Minsk: $time"
+        time_text.text = "Time in Minsk: ${time.take(19).takeLast(8)}"
     }
 
     override fun showThrowable(t: Throwable) {
